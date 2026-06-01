@@ -10,6 +10,7 @@ import CertificatesSection from "@/components/section/certificates-section";
 import ProjectsSection from "@/components/section/projects-section";
 import WorkSection from "@/components/section/work-section";
 import { ArrowUpRight } from "lucide-react";
+import Lanyard from "@/components/Lanyard";
 
 const BLUR_FADE_DELAY = 0.04;
 
@@ -33,12 +34,14 @@ export default function Page() {
               />
             </div>
             <BlurFade delay={BLUR_FADE_DELAY} className="order-1 md:order-2">
-              <Avatar className="size-24 md:size-32 border rounded-full shadow-lg ring-4 ring-muted">
+              <Avatar className="size-24 md:size-32 border rounded-lg shadow-lg ring-4 ring-muted">
                 <AvatarImage alt={DATA.name} src={DATA.avatarUrl} />
                 <AvatarFallback>{DATA.initials}</AvatarFallback>
               </Avatar>
             </BlurFade>
           </div>
+          <Lanyard position={[0, 0, 20]} gravity={[0, -40, 0]} />
+
         </div>
       </section>
       <section id="about">

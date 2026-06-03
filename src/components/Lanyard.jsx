@@ -139,7 +139,10 @@ function Band({ maxSpeed = 50, minSpeed = 0, isMobile = false }) {
 
       if (img) {
         // Draw photo
+        ctx.save();
+        ctx.filter = 'brightness(0.6) contrast(1.2)';
         ctx.drawImage(img, avatarX, avatarY, avatarSize, avatarSize);
+        ctx.restore()
       } else {
         // Default monogram fallback if image not ready
         ctx.fillStyle = '#27272a'; // zinc-800
@@ -156,9 +159,9 @@ function Band({ maxSpeed = 50, minSpeed = 0, isMobile = false }) {
 
       // 7. Subtitle
       ctx.fillStyle = '#6366f1'; // indigo
-      ctx.font = 'bold 20px monospace';
+      ctx.font = 'bold 25px monospace';
       ctx.fillText('FULL-STACK DEVELOPER', 256, 430);
-
+      ctx.shadowBlur = 0;
       // 8. Separator
       ctx.strokeStyle = 'rgba(255, 255, 255, 0.08)';
       ctx.lineWidth = 2;
@@ -169,11 +172,12 @@ function Band({ maxSpeed = 50, minSpeed = 0, isMobile = false }) {
 
       // 9. Details Fields
       ctx.fillStyle = '#a1a1aa'; // zinc-400
-      ctx.font = '16px monospace';
+      ctx.font = '20px monospace';
       ctx.textAlign = 'left';
-      ctx.fillText('ID NUMBER:  2026-CR-0162', 70, 515);
-      ctx.fillText('LOCATION:   Cebu, PH', 70, 545);
-      ctx.fillText('CLASSIF:    Dean\'s Lister', 70, 575);
+      ctx.fillText('ID NUMBER:  2026-CR-0162', 72, 525);
+      ctx.fillText('LOCATION:   Cebu, PH', 72, 555);
+      ctx.fillText('CLASSIF:    Dean\'s Lister', 72, 585);
+      ctx.shadowBlur = 0;
 
       // 10. Barcode element
       ctx.fillStyle = '#ffffff';

@@ -123,6 +123,26 @@ body {
     @apply bg-background text-foreground;
   }
 
+  html,
+  body,
+  *::before,
+  *::after,
+  * {
+    transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, box-shadow;
+    transition-duration: 300ms;
+    transition-timing-function: ease;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html,
+    body,
+    *::before,
+    *::after,
+    * {
+      transition-duration: 0ms;
+    }
+  }
+
   /* Shiki dual theme support */
   .shiki,
   .shiki span {

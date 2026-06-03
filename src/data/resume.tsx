@@ -7,9 +7,20 @@ import { Python } from "@/components/ui/svgs/python";
 import { Postgresql } from "@/components/ui/svgs/postgresql";
 import { Docker } from "@/components/ui/svgs/docker";
 import { Csharp } from "@/components/ui/svgs/csharp";
-import { Laravel } from "@/components/ui/svgs/laravel";
-import { Php } from "@/components/ui/svgs/php";
 import { Tailwindcss } from "@/components/ui/svgs/tailwindcss";
+import {
+  Css3,
+  DotNet,
+  Firebase,
+  Html5,
+  Inertia,
+  JavaScript,
+  Jest,
+  Laravel,
+  Php,
+  Playwright,
+  Postman,
+} from "@/components/ui/svgs/brand-icons";
 
 export const DATA = {
   name: "Christian Lloyd G. Rivera",
@@ -33,16 +44,16 @@ export const DATA = {
     { name: "Python", icon: Python },
     { name: "PostgreSQL", icon: Postgresql },
     { name: "Docker", icon: Docker },
-    { name: "JavaScript", icon: undefined },
-    { name: "HTML", icon: undefined },
-    { name: "CSS", icon: undefined },
-    { name: "Inertia.js", icon: undefined },
-    { name: "ASP.NET MVC", icon: undefined },
-    { name: "Firebase", icon: undefined },
-    { name: "Postman", icon: undefined },
+    { name: "JavaScript", icon: JavaScript },
+    { name: "HTML", icon: Html5 },
+    { name: "CSS", icon: Css3 },
+    { name: "Inertia.js", icon: Inertia },
+    { name: "ASP.NET MVC", icon: DotNet },
+    { name: "Firebase", icon: Firebase },
+    { name: "Postman", icon: Postman },
     { name: "Git / GitHub", icon: Icons.github },
-    { name: "Playwright", icon: undefined },
-    { name: "Jest", icon: undefined },
+    { name: "Playwright", icon: Playwright },
+    { name: "Jest", icon: Jest },
   ],
   navbar: [
     { href: "/", icon: HomeIcon, label: "Home" },
@@ -108,7 +119,7 @@ export const DATA = {
   ],
   projects: [
     {
-      title: "EventPro: Smart Supplier Management and Analytics Platform",
+      title: "EventPro: Smart Supplier Management and Analytics Platform (Capstone Project)",
       href: "",
       dates: "May 2025 - Dec 2025",
       active: true,
@@ -133,7 +144,7 @@ export const DATA = {
       video: "",
     },
     {
-      title: "PeptieshayByKisha",
+      title: "PeptieshayByKisha (Client Project)",
       href: "",
       dates: "April 2026",
       active: true,
@@ -158,7 +169,7 @@ export const DATA = {
       video: "",
     },
     {
-      title: "Salon Management System",
+      title: "Salon Management System (Client Project)",
       href: "",
       dates: "March 2024 - April 2024",
       active: true,
@@ -189,7 +200,7 @@ export const DATA = {
       dates: "2024",
       description:
         "Attended Tech Talk on Database Programming focusing on advanced database concepts, optimization, and programming techniques.",
-      image: "",
+      image: "uc.png",
       links: [],
     },
     {
@@ -198,7 +209,7 @@ export const DATA = {
       dates: "2024",
       description:
         "Completed technical tutorial sessions on networking essentials, network setup, troubleshooting, and network protocols.",
-      image: "",
+      image: "uc.png",
       links: [],
     },
   ],

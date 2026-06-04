@@ -29,9 +29,9 @@ export const DATA = {
   location: "Libo, Tayud Consolacion, Cebu, Philippines",
   locationLink: "https://www.google.com/maps/place/Consolacion,+Cebu",
   description:
-    "Motivated Full-Stack Developer and IT student with hands-on experience in building scalable web applications, software testing, and DevOps workflows.",
+    "Motivated Full-Stack Developer and IT graduate with hands-on experience in building scalable web applications, software testing, and DevOps workflows.",
   summary:
-    "Motivated Full-Stack Developer and IT student with hands-on experience in building web applications, software testing, and DevOps workflows. Skilled in developing scalable systems using Laravel, React, ASP.NET MVC, Node.js, and Tailwind CSS. Experienced in API integration, database design, deployment workflows, and version control using GitHub. Passionate about building efficient, user-focused applications and contributing to collaborative development teams.",
+    "Full-Stack Developer and Information Technology graduate with internship and client project experience building scalable web applications. Proficient in React, Laravel, ASP.NET MVC, Node.js, Tailwind CSS, and REST API development. Experienced in database design, software testing, deployment workflows, Docker, GitHub, and Agile development practices. Passionate about developing high-quality software solutions and continuously learning new technologies to deliver business value. ",
   avatarUrl: "/me.png",
   skills: [
     { name: "React", icon: ReactLight },

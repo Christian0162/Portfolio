@@ -140,7 +140,7 @@ function Band({ maxSpeed = 50, minSpeed = 0, isMobile = false }) {
       if (img) {
         // Draw photo
         ctx.save();
-        ctx.filter = 'brightness(0.6) contrast(1.2)';
+        ctx.filter = 'brightness(0.6)';
         ctx.drawImage(img, avatarX, avatarY, avatarSize, avatarSize);
         ctx.restore()
       } else {
@@ -154,8 +154,8 @@ function Band({ maxSpeed = 50, minSpeed = 0, isMobile = false }) {
 
       // 6. Name
       ctx.fillStyle = '#ffffff';
-      ctx.font = 'bold 36px sans-serif';
-      ctx.fillText('CHRISTIAN RIVERA', 256, 395);
+      ctx.font = 'bold 28px sans-serif';
+      ctx.fillText('CHRISTIAN LLYOD G. RIVERA', 256, 395);
 
       // 7. Subtitle
       ctx.fillStyle = '#6366f1'; // indigo

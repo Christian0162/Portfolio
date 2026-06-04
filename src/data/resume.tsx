@@ -57,7 +57,6 @@ export const DATA = {
   ],
   navbar: [
     { href: "/", icon: HomeIcon, label: "Home" },
-    { href: "/blog", icon: NotebookIcon, label: "Blog" },
   ],
   contact: {
     email: "riv.christian19@gmail.com",
@@ -127,10 +126,15 @@ export const DATA = {
         "Developed EventPro, a smart supplier management and analytics platform for event planning (Capstone project). Implemented modules including event posting, supplier applications, contract management, and secure transactions. Built a real-time messaging system and an analytics dashboard for user insights. Designed role-based access control for different user types (admin, supplier, client) and integrated AI-assisted supplier recommendation features.",
       technologies: [
         "React",
-        "Laravel",
-        "TailwindCSS",
-        "PostgreSQL",
+        "Python",
         "Node.js",
+        "Firebase Authentication",
+        "Firebase Realtime Database",
+        "Firestore",
+        "FastAPI",
+        "Gemini AI",
+        "Lalamove API",
+        "Xendit API",
         "REST API",
       ],
       links: [
@@ -140,7 +144,7 @@ export const DATA = {
           icon: <Icons.github className="size-3" />,
         },
       ],
-      image: "",
+      image: "eventpro.png",
       video: "",
     },
     {
@@ -156,7 +160,7 @@ export const DATA = {
         "Firebase",
         "Firestore",
         "Docker",
-        "Authentication",
+        "Firebase Authentication",
       ],
       links: [
         {
@@ -165,7 +169,7 @@ export const DATA = {
           icon: <Icons.github className="size-3" />,
         },
       ],
-      image: "",
+      image: "peptieshaybykisha.png",
       video: "",
     },
     {
@@ -176,10 +180,10 @@ export const DATA = {
       description:
         "Developed an end-to-end salon management system designed to streamline booking, scheduling, and billing workflows. Designed the database schema and system architecture for scalability. Built responsive admin and staff dashboards with role-based access control. Implemented key features including inventory tracking, appointment scheduling, and automated billing reports.",
       technologies: [
-        "React",
-        "Laravel",
+        "ASP.NET MVC",
+        "Razor",
         "TailwindCSS",
-        "MySQL",
+        "SSMS (SQL Server Management Studio)",
         "System Design",
       ],
       links: [
@@ -189,7 +193,7 @@ export const DATA = {
           icon: <Icons.github className="size-3" />,
         },
       ],
-      image: "",
+      image: "salon.png",
       video: "",
     },
   ],
@@ -210,6 +214,24 @@ export const DATA = {
       description:
         "Completed technical tutorial sessions on networking essentials, network setup, troubleshooting, and network protocols.",
       image: "uc.png",
+      links: [],
+    },
+    {
+      title: "Certificate of Recognition",
+      issuer: "University of Cebu Lapu-Lapu and Mandaue",
+      dates: "2026",
+      description:
+        "Awarded for being recognized as the Outstanding Capstone Project for the study entitled 'EventPro: Smart Supplier Management and Analytics Platform for Event Planning'",
+      image: "uc.png",
+      links: [],
+    },
+    {
+      title: "Certificate of Completion",
+      issuer: "Sprobe Inc.",
+      dates: "2026",
+      description:
+        "Awarded for having excellently performed in Sprobe's internship program under the Project Manangement Division (PMD) from February 2026 to May 2026, with a service equivalent to 540 hours.",
+      image: "sprobe.png",
       links: [],
     },
   ],

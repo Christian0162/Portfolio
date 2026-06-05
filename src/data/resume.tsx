@@ -23,7 +23,7 @@ import {
 } from "@/components/ui/svgs/brand-icons";
 
 export const DATA = {
-  name: "Christian Lloyd G. Rivera",
+  name: "Christian Llyod G. Rivera",
   initials: "CR",
   url: "https://github.com/Christian0162",
   location: "Libo, Tayud Consolacion, Cebu, Philippines",

@@ -6,54 +6,51 @@ import { Timeline, TimelineItem, TimelineConnectItem } from "@/components/timeli
 
 export default function CertificatesSection() {
   return (
-    <section id="certificates" className="overflow-hidden">
-      <div className="flex min-h-0 flex-col gap-y-8 w-full">
-        <div className="flex flex-col gap-y-4 items-center justify-center">
-          <div className="flex items-center w-full">
-            <div className="flex-1 h-px bg-linear-to-r from-transparent from-5% via-border via-95% to-transparent" />
-            <div className="border bg-primary z-10 rounded-xl px-4 py-1">
-              <span className="text-background text-sm font-medium">Certificates & Seminars</span>
-            </div>
-            <div className="flex-1 h-px bg-linear-to-l from-transparent from-5% via-border via-95% to-transparent" />
-          </div>
-          <div className="flex flex-col gap-y-3 items-center justify-center">
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">Continuous Learning</h2>
-            <p className="text-muted-foreground md:text-lg/relaxed lg:text-base/relaxed xl:text-lg/relaxed text-balance text-center">
-              I continuously expand my technical knowledge by participating in tech talks, completing certifications, and staying updated on modern industry practices.
-            </p>
-          </div>
+    <div className="flex flex-col gap-y-8 w-full">
+      <div className="flex flex-col gap-y-3">
+        <div className="flex items-center gap-4">
+          <span className="h-1.5 w-12 bg-indigo-500 rounded-full" />
+          <h2 className="text-2xl sm:text-3xl font-bold tracking-tight">Credentials & Certifications</h2>
         </div>
+        <p className="text-muted-foreground text-sm sm:text-base max-w-xl">
+          I continuously expand my technical knowledge by completing certifications, participating in tech talks, and keeping up with modern engineering standards.
+        </p>
+      </div>
+
+      <div className="max-w-3xl w-full mx-auto mt-2">
         <Timeline>
           {DATA.certificates.map((cert) => (
-            <TimelineItem key={cert.title + cert.dates} className="w-full flex items-start justify-between gap-10">
+            <TimelineItem key={cert.title + cert.dates} className="w-full flex items-start justify-between gap-6 md:gap-10 pb-8">
               <TimelineConnectItem className="flex items-start justify-center">
                 {cert.image ? (
                   <img
                     src={cert.image}
                     alt={cert.title}
-                    className="size-10 bg-card z-10 shrink-0 overflow-hidden p-1 border rounded-full shadow ring-2 ring-border object-contain flex-none"
+                    className="size-11 bg-white z-10 shrink-0 overflow-hidden p-1.5 border rounded-2xl shadow-md ring-2 ring-border/50 object-contain flex-none transition-transform hover:scale-105"
                   />
                 ) : (
-                  <div className="size-10 bg-card z-10 shrink-0 overflow-hidden p-1 border rounded-full shadow ring-2 ring-border flex-none" />
+                  <div className="size-11 bg-card z-10 shrink-0 overflow-hidden p-1.5 border rounded-2xl shadow-md ring-2 ring-border/50 flex-none" />
                 )}
               </TimelineConnectItem>
-              <div className="flex flex-1 flex-col justify-start gap-2 min-w-0">
-                {cert.dates && (
-                  <time className="text-xs text-muted-foreground">{cert.dates}</time>
-                )}
-                {cert.title && (
-                  <h3 className="font-semibold leading-none">{cert.title}</h3>
-                )}
+              <div className="flex flex-1 flex-col justify-start gap-2 min-w-0 bg-card/50 dark:bg-card/30 backdrop-blur-md border border-border/60 hover:border-indigo-500/30 p-5 rounded-2xl transition-all duration-300">
+                <div className="flex items-center justify-between gap-4">
+                  {cert.title && (
+                    <h3 className="font-bold text-base sm:text-lg leading-tight text-zinc-950 dark:text-white">{cert.title}</h3>
+                  )}
+                  {cert.dates && (
+                    <time className="text-xs text-zinc-600 dark:text-zinc-400 font-mono bg-muted border px-2.5 py-0.5 rounded-full shrink-0">{cert.dates}</time>
+                  )}
+                </div>
                 {cert.issuer && (
-                  <p className="text-sm text-muted-foreground">{cert.issuer}</p>
+                  <p className="text-xs sm:text-sm text-indigo-600 dark:text-indigo-400 font-semibold font-sans">{cert.issuer}</p>
                 )}
                 {cert.description && (
-                  <p className="text-sm text-muted-foreground leading-relaxed wrap-break-word">
+                  <p className="text-xs sm:text-sm text-zinc-700 dark:text-zinc-300 leading-relaxed font-sans">
                     {cert.description}
                   </p>
                 )}
                 {cert.links && cert.links.length > 0 && (
-                  <div className="mt-1 flex flex-row flex-wrap items-start gap-2">
+                  <div className="mt-2 flex flex-row flex-wrap items-start gap-2">
                     {(cert.links as readonly { href: string; title: string; icon?: React.ReactNode }[]).map((link, idx) => (
                       <Link
                         href={link.href}
@@ -61,7 +58,7 @@ export default function CertificatesSection() {
                         target="_blank"
                         rel="noopener noreferrer"
                       >
-                        <Badge className="flex items-center gap-1.5 text-xs bg-primary text-primary-foreground">
+                        <Badge className="flex items-center gap-1.5 text-xs bg-primary text-primary-foreground hover:bg-indigo-600 transition-colors">
                           {link.icon}
                           {link.title}
                         </Badge>
@@ -74,6 +71,6 @@ export default function CertificatesSection() {
           ))}
         </Timeline>
       </div>
-    </section>
+    </div>
   );
 }

@@ -1,3 +1,5 @@
+"use client";
+
 import BlurFade from "@/components/magicui/blur-fade";
 import { ProjectCard } from "@/components/project-card";
 import { DATA } from "@/data/resume";
@@ -5,55 +7,40 @@ import { DATA } from "@/data/resume";
 const BLUR_FADE_DELAY = 0.04;
 
 export default function ProjectsSection() {
-    return (
-        <section id="projects">
-            <div className="flex min-h-0 flex-col gap-y-8">
-                <div className="flex flex-col gap-y-4 items-center justify-center">
-                    <div className="flex items-center w-full">
-                        <div
-                            className="flex-1 h-px bg-linear-to-r from-transparent from-5% via-border via-95% to-transparent"
+  return (
+    <div className="flex flex-col gap-y-8 w-full">
+      <div className="flex flex-col gap-y-3">
+        <div className="flex items-center gap-4">
+          <span className="h-1.5 w-12 bg-indigo-500 rounded-full" />
+          <h2 className="text-2xl sm:text-3xl font-bold tracking-tight">Recent Work</h2>
+        </div>
+        <p className="text-muted-foreground text-sm sm:text-base max-w-xl">
+          I&apos;ve worked on a variety of projects, from client e-commerce sites to complex capstone systems. Here are a few of my favorites.
+        </p>
+      </div>
 
-                        />
-                        <div className="border bg-primary z-10 rounded-xl px-4 py-1">
-                            <span className="text-background text-sm font-medium">My Projects</span>
-                        </div>
-                        <div
-                            className="flex-1 h-px bg-linear-to-l from-transparent from-5% via-border via-95% to-transparent"
-
-                        />
-                    </div>
-                    <div className="flex flex-col gap-y-3 items-center justify-center">
-                        <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">Check out my latest work</h2>
-                        <p className="text-muted-foreground md:text-lg/relaxed lg:text-base/relaxed xl:text-lg/relaxed text-balance text-center">
-                            I&apos;ve worked on a variety of projects, from simple
-                            websites to complex web applications. Here are a few of my
-                            favorites.
-                        </p>
-                    </div>
-                </div>
-                <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 max-w-[800px] mx-auto auto-rows-fr">
-                    {DATA.projects.map((project, id) => (
-                        <BlurFade
-                            key={project.title}
-                            delay={BLUR_FADE_DELAY * 12 + id * 0.05}
-                            className="h-full"
-                        >
-                            <ProjectCard
-                                href={project.href}
-                                key={project.title}
-                                title={project.title}
-                                description={project.description}
-                                dates={project.dates}
-                                tags={project.technologies}
-                                image={project.image}
-                                video={project.video}
-                                links={project.links}
-                            />
-                        </BlurFade>
-                    ))}
-                </div>
-            </div>
-        </section>
-    );
+      <div className="grid grid-cols-1 gap-5 md:grid-cols-3 max-w-6xl w-full mx-auto auto-rows-fr mt-2">
+        {DATA.projects.map((project, id) => (
+          <BlurFade
+            key={project.title}
+            delay={BLUR_FADE_DELAY * 12 + id * 0.05}
+            className="h-full"
+          >
+            <ProjectCard
+              href={project.href}
+              key={project.title}
+              title={project.title}
+              description={project.description}
+              dates={project.dates}
+              tags={project.technologies}
+              image={project.image}
+              video={project.video}
+              links={project.links}
+              className="hover:shadow-[0_0_24px_rgba(99,102,241,0.08)] hover:border-indigo-500/20 hover:scale-[1.02] transition-all duration-300 bg-card/40 backdrop-blur-md rounded-2xl border-border/50"
+            />
+          </BlurFade>
+        ))}
+      </div>
+    </div>
+  );
 }
-

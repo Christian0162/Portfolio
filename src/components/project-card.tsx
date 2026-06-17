@@ -108,20 +108,20 @@ export function ProjectCard({
       <div className="p-6 flex flex-col gap-3 flex-1">
         <div className="flex items-start justify-between gap-2">
           <div className="flex flex-col gap-1">
-            <h3 className="font-semibold">{title}</h3>
-            <time className="text-xs text-muted-foreground">{dates}</time>
+            <h3 className="font-semibold text-zinc-950 dark:text-white">{title}</h3>
+            <time className="text-xs text-zinc-500 dark:text-zinc-400">{dates}</time>
           </div>
           <Link
             href={href || "#"}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-muted-foreground hover:text-foreground transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded-sm"
+            className="text-zinc-400 hover:text-zinc-950 dark:hover:text-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded-sm"
             aria-label={`Open ${title}`}
           >
             <ArrowUpRight className="h-4 w-4" aria-hidden />
           </Link>
         </div>
-        <div className="text-xs flex-1 prose max-w-full text-pretty font-sans leading-relaxed text-muted-foreground dark:prose-invert">
+        <div className="text-xs flex-1 prose max-w-full text-pretty font-sans leading-relaxed text-zinc-700 dark:text-zinc-200 dark:prose-invert">
           <Markdown>{description}</Markdown>
         </div>
         {tags && tags.length > 0 && (

@@ -36,10 +36,10 @@ function ScrollSection({ id, backdropText, children, className = "" }: ScrollSec
   return (
     <section
       id={id}
-      className={`w-full min-h-screen snap-start snap-always relative flex items-center justify-center py-24 px-6 sm:px-12 md:px-20 ${className}`}
+      className={`w-full min-h-screen snap-start snap-always relative flex items-center justify-center py-12 md:py-16 px-6 sm:px-12 md:px-20 ${className}`}
     >
       {/* Aesthetic giant background typography */}
-      <div className="absolute top-10 left-6 sm:top-14 sm:left-12 select-none pointer-events-none z-0">
+      <div className="absolute top-6 left-6 sm:top-10 sm:left-12 select-none pointer-events-none z-0">
         <h2 className="text-[14vw] sm:text-[10vw] font-black leading-none uppercase tracking-tighter text-zinc-900/5 dark:text-white/5 font-sans">
           {backdropText}
         </h2>
@@ -51,7 +51,7 @@ function ScrollSection({ id, backdropText, children, className = "" }: ScrollSec
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: false, amount: 0.1 }}
         transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-        className="w-full max-w-5xl mx-auto z-10 relative flex flex-col justify-center h-full pt-16 md:pt-20"
+        className="w-full max-w-5xl mx-auto z-10 relative flex flex-col justify-center h-full pt-8 md:pt-24"
       >
         {children}
       </motion.div>
@@ -125,7 +125,7 @@ export default function Page() {
       {/* 1. INTRO / HERO SECTION */}
       <ScrollSection id="hero" backdropText="INTRO">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-4 items-center w-full">
-          <div className="md:col-span-6 flex flex-col justify-center text-left space-y-6">
+          <div className="md:col-span-6 flex flex-col justify-center text-left space-y-4">
             <div className="space-y-2">
               <motion.div
                 initial={{ opacity: 0, x: -20 }}
@@ -199,7 +199,7 @@ export default function Page() {
 
       {/* 3. WORK EXPERIENCE SECTION */}
       <ScrollSection id="work" backdropText="WORK">
-        <div className="space-y-6 w-full md:mt-5 mt-0">
+        <div className="space-y-4 w-full md:mt-5 mt-0">
           <div className="flex items-center gap-4">
             <span className="h-1.5 w-12 bg-zinc-900 dark:bg-white rounded-full" />
             <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-zinc-950 dark:text-white font-sans">Professional Journey</h2>
@@ -212,7 +212,7 @@ export default function Page() {
 
       {/* 4. EDUCATION SECTION */}
       <ScrollSection id="education" backdropText="STUDIES">
-        <div className="space-y-8 w-full md:mt-5 mt-0">
+        <div className="space-y-6 w-full md:mt-5 mt-0">
           <div className="flex items-center gap-4">
             <span className="h-1.5 w-12 bg-zinc-900 dark:bg-white rounded-full" />
             <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-zinc-950 dark:text-white">Education Timeline</h2>
@@ -263,7 +263,7 @@ export default function Page() {
 
       {/* 5. SKILLS SECTION */}
       <ScrollSection id="skills" backdropText="SKILLS">
-        <div className="space-y-8 w-full md:mt-5 mt-0">
+        <div className="space-y-6 w-full md:mt-5 mt-0">
           <div className="flex items-center gap-4">
             <span className="h-1.5 w-12 bg-zinc-900 dark:bg-white rounded-full" />
             <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-zinc-950 dark:text-white">Core Competencies</h2>

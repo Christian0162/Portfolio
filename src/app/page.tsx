@@ -199,7 +199,7 @@ export default function Page() {
 
       {/* 3. WORK EXPERIENCE SECTION */}
       <ScrollSection id="work" backdropText="WORK">
-        <div className="space-y-6 w-full">
+        <div className="space-y-6 w-full mt-5">
           <div className="flex items-center gap-4">
             <span className="h-1.5 w-12 bg-zinc-900 dark:bg-white rounded-full" />
             <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-zinc-950 dark:text-white font-sans">Professional Journey</h2>
@@ -212,7 +212,7 @@ export default function Page() {
 
       {/* 4. EDUCATION SECTION */}
       <ScrollSection id="education" backdropText="STUDIES">
-        <div className="space-y-8 w-full">
+        <div className="space-y-8 w-full mt-5">
           <div className="flex items-center gap-4">
             <span className="h-1.5 w-12 bg-zinc-900 dark:bg-white rounded-full" />
             <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-zinc-950 dark:text-white">Education Timeline</h2>
@@ -263,7 +263,7 @@ export default function Page() {
 
       {/* 5. SKILLS SECTION */}
       <ScrollSection id="skills" backdropText="SKILLS">
-        <div className="space-y-8 w-full">
+        <div className="space-y-8 w-full mt-5">
           <div className="flex items-center gap-4">
             <span className="h-1.5 w-12 bg-zinc-900 dark:bg-white rounded-full" />
             <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-zinc-950 dark:text-white">Core Competencies</h2>

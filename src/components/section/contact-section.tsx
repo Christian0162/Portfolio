@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 
 export default function ContactSection() {
   return (
-    <div className="border border-border/50 bg-card/30 backdrop-blur-md p-10 sm:p-14 rounded-3xl relative overflow-hidden shadow-2xl w-full max-w-xl mx-auto flex flex-col items-center gap-6 text-center">
+    <div className="mt-6 border border-border/50 bg-card/30 backdrop-blur-md p-10 sm:p-14 rounded-3xl relative overflow-hidden shadow-2xl w-full max-w-xl mx-auto flex flex-col items-center gap-6 text-center">
       {/* Background Flickering Grid */}
       <div className="absolute inset-0 rounded-3xl overflow-hidden pointer-events-none z-0">
         <FlickeringGrid

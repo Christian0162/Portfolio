@@ -39,6 +39,7 @@ interface Props {
     type: string;
     href: string;
   }[];
+  clientSide?: boolean;
   className?: string;
 }
 
@@ -52,23 +53,20 @@ export function ProjectCard({
   image,
   video,
   links,
+  clientSide,
   className,
 }: Props) {
   return (
     <div
       className={cn(
-        "flex flex-col h-full border border-border rounded-xl overflow-hidden hover:ring-2 cursor-pointer hover:ring-muted transition-all duration-200",
+        "flex flex-col h-full border border-border rounded-xl overflow-hidden hover:ring-2 hover:ring-muted transition-all duration-200",
+        (!clientSide && href) && "cursor-pointer",
         className
       )}
     >
       <div className="relative shrink-0">
-        <Link
-          href={href || "#"}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="block"
-        >
-          {video ? (
+        {(clientSide || !href) ? (
+          video ? (
             <video
               src={video}
               autoPlay
@@ -81,9 +79,31 @@ export function ProjectCard({
             <ProjectImage src={image} alt={title} />
           ) : (
             <div className="w-full h-48 bg-muted" />
-          )}
-        </Link>
-        {links && links.length > 0 && (
+          )
+        ) : (
+          <Link
+            href={href || "#"}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block"
+          >
+            {video ? (
+              <video
+                src={video}
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="w-full h-48 object-cover"
+              />
+            ) : image ? (
+              <ProjectImage src={image} alt={title} />
+            ) : (
+              <div className="w-full h-48 bg-muted" />
+            )}
+          </Link>
+        )}
+        {!clientSide && links && links.length > 0 && (
           <div className="absolute top-2 right-2 flex flex-wrap gap-2">
             {links.map((link, idx) => (
               <Link
@@ -111,15 +131,17 @@ export function ProjectCard({
             <h3 className="font-semibold text-zinc-950 dark:text-white">{title}</h3>
             <time className="text-xs text-zinc-500 dark:text-zinc-400">{dates}</time>
           </div>
-          <Link
-            href={href || "#"}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-zinc-400 hover:text-zinc-950 dark:hover:text-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded-sm"
-            aria-label={`Open ${title}`}
-          >
-            <ArrowUpRight className="h-4 w-4" aria-hidden />
-          </Link>
+          {!clientSide && href && (
+            <Link
+              href={href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-zinc-400 hover:text-zinc-950 dark:hover:text-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded-sm"
+              aria-label={`Open ${title}`}
+            >
+              <ArrowUpRight className="h-4 w-4" aria-hidden />
+            </Link>
+          )}
         </div>
         <div className="text-xs flex-1 prose max-w-full text-pretty font-sans leading-relaxed text-zinc-700 dark:text-zinc-200 dark:prose-invert">
           <Markdown>{description}</Markdown>

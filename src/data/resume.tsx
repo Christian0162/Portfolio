@@ -146,6 +146,7 @@ export const DATA = {
       ],
       image: "eventpro.png",
       video: "",
+      clientSide: false,
     },
     {
       title: "PeptieshayByKisha (Client Project)",
@@ -171,6 +172,7 @@ export const DATA = {
       ],
       image: "peptieshaybykisha.png",
       video: "",
+      clientSide: true,
     },
     {
       title: "Salon Management System (Client Project)",
@@ -195,6 +197,7 @@ export const DATA = {
       ],
       image: "salon.png",
       video: "",
+      clientSide: true,
     },
   ],
   certificates: [

@@ -8,7 +8,7 @@ const BLUR_FADE_DELAY = 0.04;
 
 export default function ProjectsSection() {
   return (
-    <div className="flex flex-col gap-y-8 w-full">
+    <div className="mt-5 flex flex-col gap-y-8 w-full">
       <div className="flex flex-col gap-y-3">
         <div className="flex items-center gap-4">
           <span className="h-1.5 w-12 bg-indigo-500 rounded-full" />
@@ -36,6 +36,7 @@ export default function ProjectsSection() {
               image={project.image}
               video={project.video}
               links={project.links}
+              clientSide={project.clientSide}
               className="hover:shadow-[0_0_24px_rgba(99,102,241,0.08)] hover:border-indigo-500/20 hover:scale-[1.02] transition-all duration-300 bg-card/40 backdrop-blur-md rounded-2xl border-border/50"
             />
           </BlurFade>

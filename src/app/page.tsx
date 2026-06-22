@@ -36,7 +36,7 @@ function ScrollSection({ id, backdropText, children, className = "" }: ScrollSec
   return (
     <section
       id={id}
-      className={`w-full min-h-screen snap-start snap-always relative flex items-start md:items-center justify-center py-8 md:py-16 px-6 sm:px-12 md:px-20 ${className}`}
+      className={`w-full min-h-0 md:min-h-screen snap-start snap-always relative flex items-start md:items-center justify-center pt-8 pb-10 md:py-16 px-6 sm:px-12 md:px-20 ${className}`}
     >
       {/* Aesthetic giant background typography - Moved down to clear navbar */}
       <div className="absolute top-20 left-6 sm:top-18 sm:left-12 select-none pointer-events-none z-0">
@@ -305,12 +305,12 @@ export default function Page() {
       </ScrollSection>
 
       {/* 6. PROJECTS SECTION */}
-      <ScrollSection id="projects" backdropText="PROJECTS" className="min-h-screen h-fit">
+      <ScrollSection id="projects" backdropText="PROJECTS">
         <ProjectsSection />
       </ScrollSection>
 
       {/* 7. CERTIFICATES SECTION */}
-      <ScrollSection id="certificates" backdropText="AWARDS" className="min-h-screen h-fit">
+      <ScrollSection id="certificates" backdropText="AWARDS">
         <CertificatesSection />
       </ScrollSection>
 

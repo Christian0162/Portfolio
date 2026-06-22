@@ -162,8 +162,8 @@ export default function Page() {
             </motion.div>
           </div>
 
-          {/* Lanyard container size balanced */}
-          <div className="md:col-span-6 flex items-center justify-center relative h-[430px] md:h-[500px] w-full">
+          {/* Lanyard container size balanced - Hidden on mobile */}
+          <div className="hidden md:flex md:col-span-6 items-center justify-center relative h-[430px] md:h-[500px] w-full">
             <Lanyard position={[0, 0, 14]} gravity={[0, -30, 0]} fov={15} />
           </div>
         </div>
@@ -174,8 +174,8 @@ export default function Page() {
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 items-center w-full">
           <div className="md:col-span-7 space-y-6">
             <div className="flex items-center gap-4">
-              <span className="h-1.5 w-12 bg-zinc-900 dark:bg-white rounded-full" />
-              <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-zinc-950 dark:text-white">Who I Am</h2>
+              <span className="h-[3px] w-12 bg-zinc-900 dark:bg-white rounded-full" />
+              <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-zinc-950 dark:text-white">Who I Am</h2>
             </div>
             <div className="text-zinc-800 dark:text-zinc-200 text-sm sm:text-base leading-relaxed text-pretty space-y-4">
               <p className="font-sans text-zinc-900 dark:text-white/90 text-base sm:text-lg">
@@ -186,7 +186,7 @@ export default function Page() {
 
           {/* Large Picture - Left edge fading away, no hover effects */}
           <div className="md:col-span-5 flex justify-center items-center">
-            <div className="relative w-full max-w-[380px] aspect-[4/5] overflow-hidden rounded-xl shadow-xl border border-border/40">
+            <div className="relative w-full max-w-[380px]  overflow-hidden rounded-xl shadow-xl border border-border/40">
               <img
                 src={DATA.avatarUrl}
                 alt={DATA.name}
@@ -199,7 +199,7 @@ export default function Page() {
 
       {/* 3. WORK EXPERIENCE SECTION */}
       <ScrollSection id="work" backdropText="WORK">
-        <div className="space-y-6 w-full mt-5">
+        <div className="space-y-6 w-full md:mt-5 mt-0">
           <div className="flex items-center gap-4">
             <span className="h-1.5 w-12 bg-zinc-900 dark:bg-white rounded-full" />
             <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-zinc-950 dark:text-white font-sans">Professional Journey</h2>
@@ -212,7 +212,7 @@ export default function Page() {
 
       {/* 4. EDUCATION SECTION */}
       <ScrollSection id="education" backdropText="STUDIES">
-        <div className="space-y-8 w-full mt-5">
+        <div className="space-y-8 w-full md:mt-5 mt-0">
           <div className="flex items-center gap-4">
             <span className="h-1.5 w-12 bg-zinc-900 dark:bg-white rounded-full" />
             <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-zinc-950 dark:text-white">Education Timeline</h2>
@@ -263,7 +263,7 @@ export default function Page() {
 
       {/* 5. SKILLS SECTION */}
       <ScrollSection id="skills" backdropText="SKILLS">
-        <div className="space-y-8 w-full mt-5">
+        <div className="space-y-8 w-full md:mt-5 mt-0">
           <div className="flex items-center gap-4">
             <span className="h-1.5 w-12 bg-zinc-900 dark:bg-white rounded-full" />
             <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-zinc-950 dark:text-white">Core Competencies</h2>

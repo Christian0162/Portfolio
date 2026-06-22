@@ -6,7 +6,7 @@ import { Timeline, TimelineItem, TimelineConnectItem } from "@/components/timeli
 
 export default function CertificatesSection() {
   return (
-    <div className="flex flex-col gap-y-8 w-full mt-5">
+    <div className="flex flex-col gap-y-8 w-full md:mt-5 mt-0">
       <div className="flex flex-col gap-y-3">
         <div className="flex items-center gap-4">
           <span className="h-1.5 w-12 bg-indigo-500 rounded-full" />

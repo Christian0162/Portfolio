@@ -32,7 +32,7 @@ export const DATA = {
     "Motivated Full-Stack Developer and IT graduate with hands-on experience in building scalable web applications, software testing, and DevOps workflows.",
   summary:
     "Full-Stack Developer and Information Technology graduate with internship and client project experience building scalable web applications. Proficient in React, Laravel, ASP.NET MVC, Node.js, Tailwind CSS, and REST API development. Experienced in database design, software testing, deployment workflows, Docker, GitHub, and Agile development practices. Passionate about developing high-quality software solutions and continuously learning new technologies to deliver business value. ",
-  avatarUrl: "/me.png",
+  avatarUrl: "/me-2.png",
   skills: [
     { name: "React", icon: ReactLight },
     { name: "Laravel", icon: Laravel },

@@ -8,7 +8,7 @@ const BLUR_FADE_DELAY = 0.04;
 
 export default function ProjectsSection() {
   return (
-    <div className="mt-5 flex flex-col gap-y-8 w-full">
+    <div className="md:mt-5 mt-0 flex flex-col gap-y-8 w-full">
       <div className="flex flex-col gap-y-3">
         <div className="flex items-center gap-4">
           <span className="h-1.5 w-12 bg-indigo-500 rounded-full" />

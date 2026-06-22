@@ -36,22 +36,22 @@ function ScrollSection({ id, backdropText, children, className = "" }: ScrollSec
   return (
     <section
       id={id}
-      className={`w-full min-h-screen snap-start snap-always relative flex items-center justify-center py-12 md:py-16 px-6 sm:px-12 md:px-20 ${className}`}
+      className={`w-full min-h-screen snap-start snap-always relative flex items-start md:items-center justify-center py-8 md:py-16 px-6 sm:px-12 md:px-20 ${className}`}
     >
-      {/* Aesthetic giant background typography */}
-      <div className="absolute top-6 left-6 sm:top-10 sm:left-12 select-none pointer-events-none z-0">
-        <h2 className="text-[14vw] sm:text-[10vw] font-black leading-none uppercase tracking-tighter text-zinc-900/5 dark:text-white/5 font-sans">
+      {/* Aesthetic giant background typography - Moved down to clear navbar */}
+      <div className="absolute top-20 left-6 sm:top-18 sm:left-12 select-none pointer-events-none z-0">
+        <h2 className="text-[14vw] sm:text-[10vw] font-black leading-none uppercase tracking-tighter text-zinc-900/10 dark:text-white/5 font-sans leading-none">
           {backdropText}
         </h2>
       </div>
 
-      {/* Content wrapper with top padding to prevent covering backdrop headers */}
+      {/* Content wrapper with top padding to clear backdrop and navbar */}
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: false, amount: 0.1 }}
         transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-        className="w-full max-w-5xl mx-auto z-10 relative flex flex-col justify-center h-full pt-8 md:pt-24"
+        className="w-full max-w-5xl mx-auto z-10 relative flex flex-col justify-start md:justify-center md:h-full pt-36 md:pt-40"
       >
         {children}
       </motion.div>
@@ -268,7 +268,7 @@ export default function Page() {
             <span className="h-1.5 w-12 bg-zinc-900 dark:bg-white rounded-full" />
             <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-zinc-950 dark:text-white">Core Competencies</h2>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl">
             {Object.entries(skillCategories).map(([category, skills]) => (
               <div
